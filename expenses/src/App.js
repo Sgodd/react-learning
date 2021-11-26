@@ -1,6 +1,8 @@
 import "./App.scss";
 import Expenses from "./components/expenses/Expenses";
 
+import {createTheme} from '@mui/material/styles';
+
 function App() {
 
     const expenses = [
