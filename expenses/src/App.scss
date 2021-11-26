@@ -1,0 +1,37 @@
+html,
+body {
+	margin: 0;
+	text-align: center;
+}
+
+.expense-item {
+    text-align: left;
+
+	.expense-item__inner {
+		padding: 10px;
+		display: inline-flex;
+		align-items: center;
+        width:100%;
+
+		.expense-item-title {
+            margin-right:20px;
+			flex-grow: 1;
+
+			.expense-item__date {
+				color: rgb(92, 92, 92);
+			}
+
+			.expense-item__title {
+				font-weight: 500;
+				font-size: 25px;
+			}
+		}
+
+		.expense-item-cost {
+			.expense-item__amount {
+				font-size: 20px;
+                font-weight:500;
+			}
+		}
+	}
+}
