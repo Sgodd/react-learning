@@ -5,47 +5,19 @@ import {createTheme} from '@mui/material/styles';
 
 function App() {
 
-    const expenses = [
-        {
-            title:"Expense 1",
-            amount: 50,
-            date: new Date(2021, 11, 20)
-        },
-        {
-            title:"Expense 2",
-            amount: 100,
-            date: new Date(2021, 11, 21)
-        },
-        {
-            title:"Expense 3",
-            amount: 150,
-            date: new Date(2021, 11, 22)
-        },
-        {
-            title:"Expense 4",
-            amount: 200,
-            date: new Date(2021, 11, 24)
-        },
-        {
-            title:"Very Big Expense 5",
-            amount: 250,
-            date: new Date(2021, 11, 25)
-        },
-        {
-            title:"Very Big Expense 6",
-            amount: 300,
-            date: new Date(2021, 11, 26)
-        },
-        {
-            title:"Very Big Expense 7",
-            amount: 250,
-            date: new Date(2021, 11, 27)
-        },
-    ]
+    const expenses = []
+
+    const addExpenseHandler = expenseData => {
+        const expense = {
+            id: expenses.length + 1,
+            ...expenseData
+        }
+        expenses.push(expense);
+    }
 
 	return (
 		<div className="App">
-            <Expenses expenses={expenses}/>
+            <Expenses expenses={expenses} onAddExpense={addExpenseHandler}/>
 		</div>
 	);
 }

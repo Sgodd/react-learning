@@ -5,7 +5,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import { DatePicker } from "@mui/lab";
 
-const ExpenseForm = () => {
+const ExpenseForm = ({onAddExpense}) => {
 	const [title, setTitle] = useState("");
 	const [amount, setAmount] = useState(0);
 	const [date, setDate] = useState(Date.now());
@@ -18,6 +18,9 @@ const ExpenseForm = () => {
             amount: amount,
             date: new Date(date)
         }
+
+
+        onAddExpense(expenseData);
 
         setTitle("");
         setAmount(0);
