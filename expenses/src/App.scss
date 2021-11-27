@@ -1,15 +1,37 @@
 html,
 body {
+    height:100%;
 	margin: 0;
 	text-align: center;
 }
 
-.expense-item-list {
+#root {
+    height:100%;
+    background-color:#666;
 	padding: 5% 10%;
 }
 
+.expense-container {
+    padding:20px 30px;
+    background-color:#151515;
+    border-radius:15px;
+    margin:20px 0px;
+    text-align:left;
+}
+
+.expense-form {
+    display:inline-flex;
+    padding:10px 20px 20px 20px;
+    background-color:#EEE;
+    border-radius:inherit;
+}
+
+.expense-item-list {
+    height:inherit;
+}
+
 .expense-item {
-	color: white;
+	color: #EEE;
 	background-color: #333;
 	padding: 20px;
 	margin: 10px 0 10px 0;
@@ -34,8 +56,8 @@ body {
 
 	.expense-item-cost {
 		.expense-item__amount {
-			font-size: 20px;
-			font-weight: 500;
+			font-size: 30px;
+			font-weight: 700;
 		}
 	}
 }

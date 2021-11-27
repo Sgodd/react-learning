@@ -31,6 +31,16 @@ function App() {
             amount: 250,
             date: new Date(2021, 11, 25)
         },
+        {
+            title:"Very Big Expense 6",
+            amount: 300,
+            date: new Date(2021, 11, 26)
+        },
+        {
+            title:"Very Big Expense 7",
+            amount: 250,
+            date: new Date(2021, 11, 27)
+        },
     ]
 
 	return (
