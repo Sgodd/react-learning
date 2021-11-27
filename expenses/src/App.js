@@ -14,7 +14,7 @@ function App() {
             ...expenseData
         }
 
-        setExpenses((prevState) => [...prevState, expense])
+        setExpenses((prevState) => [expense, ...prevState])
     }
 
 	return (
