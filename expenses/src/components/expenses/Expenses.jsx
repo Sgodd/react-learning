@@ -17,7 +17,7 @@ const Expenses = ({ expenses, onAddExpense }) => {
 				<Box className="expense-item-list">
 					{expenses.map((v, i) => (
 						<ExpenseItem
-							key={i}
+							key={v.id}
 							title={v.title}
 							amount={v.amount}
 							date={v.date}

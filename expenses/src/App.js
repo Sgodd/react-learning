@@ -2,17 +2,19 @@ import "./App.scss";
 import Expenses from "./components/expenses/Expenses";
 
 import {createTheme} from '@mui/material/styles';
+import { useState } from "react";
 
 function App() {
 
-    const expenses = []
+    const [expenses, setExpenses] = useState([]);
 
     const addExpenseHandler = expenseData => {
         const expense = {
             id: expenses.length + 1,
             ...expenseData
         }
-        expenses.push(expense);
+
+        setExpenses((prevState) => [...prevState, expense])
     }
 
 	return (
