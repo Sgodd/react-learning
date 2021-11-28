@@ -1,4 +1,33 @@
 html,
 body {
 	margin: 0;
+    height:100%;
+    text-align:center;
+}
+
+#root {
+    height:100%;
+
+    
+}
+
+.App {
+    background-color:rgb(35, 47, 56);
+    min-height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    padding:30px;
+}
+
+.user-form {
+    text-align:left;
+    display:flex;
+    flex-direction: column;
+
+    .MuiFormControl-root {
+        margin:10px 0px
+    }
 }
