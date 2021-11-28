@@ -5,7 +5,6 @@ import {createTheme} from '@mui/material/styles';
 import { useState } from "react";
 
 function App() {
-
     const [expenses, setExpenses] = useState([]);
 
     const addExpenseHandler = expenseData => {
