@@ -1,10 +1,12 @@
-import { AppBar } from '@mui/material'
+import { AppBar, Toolbar } from '@mui/material'
 import React from 'react'
 
 const Header = () => {
     return (
-        <AppBar>
-            
+        <AppBar position="relative">
+            <Toolbar>
+                Header 
+            </Toolbar>
         </AppBar>
     )
 }
