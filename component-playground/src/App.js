@@ -1,23 +1,36 @@
-import { Card, CardContent, Divider, Drawer, Fab, List, ListItem } from "@mui/material";
+import {
+	Card,
+	CardContent,
+	Divider,
+	Drawer,
+	Fab,
+	List,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./App.scss";
 import { useState } from "react";
 import { Box } from "@mui/material";
+import ListItems from "./ListItems";
+import Header from "./components/headers/Header";
 
 function App() {
 	const [open, setOpen] = useState(false);
 	const [content, setContent] = useState(<></>);
 
 	const components = [
-		{
-			name: "Div1",
-			content: (
-				<Card>
-					<CardContent>Hello1</CardContent>
-				</Card>
-			),
+		{   
+            isParent:true,
+			name: "Headers",
+			content: [
+                {
+                    name: "Header 1",
+                    content: (
+                        <Header/>
+                    ),
+                },
+            ]
 		},
-        {
+		{
 			name: "Div2",
 			content: (
 				<Card>
@@ -45,24 +58,13 @@ function App() {
 					setOpen(false);
 				}}
 			>
-				<List sx={{minWidth:200}}>
-                    <Divider/>
-					{components.map((component, index) => (
-						<ListItem
-                            sx={{p:2}}
-							key={component.name}
-							button
-							onClick={(e) => {setContent(component.content)}}
-						>
-							{component.name}
-						</ListItem>
-					))}
-                    <Divider/>
+				<List sx={{ minWidth: 200 }}>
+					<Divider />
+					    {components.map((component, index) => <ListItems key={component.name} setContent={setContent} component={component}/>)}
+					<Divider />
 				</List>
 			</Drawer>
-            <Box>
-                {content}
-            </Box>
+			<Box>{content}</Box>
 		</div>
 	);
 }
