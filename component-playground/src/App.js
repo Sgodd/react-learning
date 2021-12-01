@@ -12,6 +12,7 @@ import { useState } from "react";
 import { Box } from "@mui/material";
 import ListItems from "./ListItems";
 import Header from "./components/headers/Header";
+import SplitPage from "./components/minipages/splitpage/SplitPage";
 
 function App() {
 	const [open, setOpen] = useState(false);
@@ -38,10 +39,11 @@ function App() {
 				</Card>
 			),
 		},
+        { name: "SplitPage", content: <SplitPage/>}
 	];
 
 	return (
-		<div className="App">
+		<Box className="App" sx={{px:20}}>
 			<Fab
 				color="primary"
 				sx={{ position: "absolute", top: 16, left: 16 }}
@@ -64,8 +66,8 @@ function App() {
 					<Divider />
 				</List>
 			</Drawer>
-			<Box>{content}</Box>
-		</div>
+			<Box width="100%" boxShadow={3}>{content}</Box>
+		</Box>
 	);
 }
 
